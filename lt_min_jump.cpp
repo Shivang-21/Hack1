@@ -2,13 +2,13 @@ class Solution {
 public:
     int jump(vector<int>& nums) {
         int n=nums.size(),m=0,C=0,prev=0;
-        for(int i=0;i<n-1;i++)
+        for(int j=0;j<n-1;j++)
         {
-            if(m<i+nums[i])
-                m=i+nums[i];
-            if(i==prev)
+            if(m<j+nums[j])
+                m=j+nums[j];
+            if(j==prev)
             {
-                c++;
+                C++;
                 prev=m;
             }
         }
