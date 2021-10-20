@@ -1,15 +1,16 @@
 class Solution {
 public:
-    int jump(vector<int>& nums) {
-        int n=nums.size(),m=0,C=0,prev=0;
-        for(int j=0;j<n-1;j++)
+    int jump(vector<int>& nums) 
+    {
+        int n=nums.size(),X=0,C=0,previous=0;
+        for(int j=0;j<n-1;j+=1)
         {
-            if(m<j+nums[j])
-                m=j+nums[j];
-            if(j==prev)
+            if(X<j+nums[j])
+               X=j+nums[j];
+            if(j==previous)
             {
-                C++;
-                prev=m;
+                C+=1;
+                previous=X;
             }
         }
         return C;
